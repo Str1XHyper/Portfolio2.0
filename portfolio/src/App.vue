@@ -1,30 +1,44 @@
 <template>
-  <div id="nav">
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
-  </div>
-  <router-view/>
+  <q-layout view="lHh Lpr lFf">
+    <q-header>
+      <q-toolbar class="header-back">
+        <q-toolbar-title>
+          Tijn van Veghel
+        </q-toolbar-title>
+        <q-spacer></q-spacer>
+        <q-btn class="q-mx-xs">
+          Home
+        </q-btn>
+        <q-btn class="q-mx-xs">
+          Projects
+        </q-btn>
+        <q-btn class="q-mx-xs">
+          Skills
+        </q-btn>
+        <q-btn class="q-mx-xs">
+          Contact
+        </q-btn>
+      </q-toolbar>
+    </q-header>
+
+    <q-page-container>
+      <router-view></router-view>
+    </q-page-container>
+  </q-layout>
 </template>
 
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
+<script>
+import { useQuasar } from 'quasar'
 
-#nav {
-  padding: 30px;
-}
+export default {
+  name: 'LayoutDefault',
 
-#nav a {
-  font-weight: bold;
-  color: #2c3e50;
-}
+  components: {
+  },
 
-#nav a.router-link-exact-active {
-  color: #42b983;
+  setup () {
+  const $q = useQuasar()
+    $q.dark.set(true)
+  }
 }
-</style>
+</script>
