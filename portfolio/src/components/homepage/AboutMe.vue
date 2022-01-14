@@ -14,7 +14,4 @@
 </template>
 
 <style>
-.btn-square{
-    border-radius: 0;
-}
 </style>

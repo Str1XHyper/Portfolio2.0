@@ -4,16 +4,16 @@
       <about-me class="col-sm-5 q-mt-xl"/> 
     </div>
     <q-separator></q-separator>
-    <div class="fit row justify-around q-mt-sm" >
+    <div class="fit row justify-around q-mt-sm q-mb-md" >
       <project-card class="col-3" :project="project" v-for="project in projects" :key="project.id"/>
     </div>
+    <q-separator></q-separator>
   </div>
 </template>
 
 <script>
-// @ is an alias to /src
-import AboutMe from '@/components/AboutMe'
-import ProjectCard from '@/components/ProjectCard'
+import AboutMe from '@/components/homepage/AboutMe'
+import ProjectCard from '@/components/homepage/ProjectCard'
 
 export default {
   name: 'Home',
@@ -50,4 +50,5 @@ export default {
   background-size: 100%;
   height: 50vh !important;
 } 
+
 </style>
