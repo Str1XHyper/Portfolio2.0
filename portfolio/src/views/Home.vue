@@ -4,8 +4,8 @@
       <about-me class="col-sm-5 q-mt-xl"/> 
     </div>
     <q-separator></q-separator>
-    <div class="full-width row wrap justify-center items-start content-start q-mt-sm" v-for="project in projects" :key="project.id">
-      <project-card :project="project" />
+    <div class="fit row justify-around q-mt-sm" >
+      <project-card class="col-3" :project="project" v-for="project in projects" :key="project.id"/>
     </div>
   </div>
 </template>
