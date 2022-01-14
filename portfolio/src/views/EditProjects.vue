@@ -245,8 +245,8 @@ export default {
   methods: {
     async toBase64(file) {
       if (
-        typeof this.selected.bannerImage != typeof "" &&
-        typeof this.selected.bannerImage != typeof undefined
+        typeof file != typeof "" &&
+        typeof file != typeof undefined
       )
         return new Promise((resolve) => {
           const reader = new FileReader();
